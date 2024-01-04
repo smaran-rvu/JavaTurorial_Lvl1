@@ -35,6 +35,7 @@ public class Strings {
         // trim returns a string with no whitespaces before and after the sting
         System.out.println(str1.trim());
 
-
+        // equals checks if a string is equal to another string
+        str1.equals("Hello World"); // flase
     }
 }
