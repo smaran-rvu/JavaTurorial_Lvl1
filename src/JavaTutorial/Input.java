@@ -32,7 +32,14 @@ public class Input {
         String var5 = scanner.nextLine().trim();
         System.out.println("var5 (String) = " + var5);
 
-        // Sclose scanner object (cause it tells you to, otherwise annoying yellow squiggly lines)
+        // close scanner object (cause it tells you to, otherwise annoying yellow squiggly lines)
         scanner.close();
+
+        // try-with-resources statement ensures that each resource is closed at the end of the statement
+        try(Scanner scanner2 = new Scanner(System.in)){
+            // statements...
+            String var6 = scanner.nextLine(); // For reading multi token inputs (inputs with spaces)
+            System.out.println("var6 (String) = " + var6);
+        }
     }
 }

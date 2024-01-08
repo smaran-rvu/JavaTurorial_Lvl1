@@ -5,7 +5,7 @@ import java.awt.*; // For point reference datatype
 
 public class VarTypes {
     
-    public static void primitiveDatatypes(String[] args){
+    public static void primitiveDatatypes(){
         byte var1 = 10;             // 1 byte  → [-128 - 127]
         short var2 = 3200;          // 2 bytes → [-32K - 32K]
         int var3 = 282283;          // 4 bytes → [-2B - 2B]
@@ -38,7 +38,7 @@ public class VarTypes {
     // deallocation of that memory is taken care by the JRE (Java Runtime Enviroment)
     // all reference datatype variables store a reference to the memory address in which the values are stored
 
-    public static void referenceDatatypes(String[] args){
+    public static void referenceDatatypes(){
         Date now = new Date();
         Point point1 = new Point(1,2);
         String message1 = new String("Hello World");
@@ -52,13 +52,13 @@ public class VarTypes {
 
     }
 
-    public static void typeCast(String[] args){
+    public static void typeCast(){
         // default typecasting
         double result = (double)10 / (double)3;
         System.out.println(result);
 
         // typecasting strings to numerical datatypes
-        // Syntax: <dataatype>.parse<datatype>(<str>)
+        // Syntax: <datatype>.parse<datatype>(<str>)
         Integer.parseInt("3");
         Float.parseFloat("3.14");
         Double.parseDouble("3.1415923");
@@ -69,7 +69,8 @@ public class VarTypes {
 
     public static void main(String[] args) {
         
-        // VarTypes obj = new VarTypes();
-        // obj.primitiveDatatypes();  
+        primitiveDatatypes();
+        referenceDatatypes();
+        typeCast();  
     }
 }
